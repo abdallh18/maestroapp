@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
 import '../../utils/styles.dart';
-import 'item_our_praticeArea.dart';
 import 'list_item_our_praticie_area.dart';
 
 class OurPracticeAreas extends StatelessWidget {
@@ -26,4 +25,3 @@ class OurPracticeAreas extends StatelessWidget {
     );
   }
 }
-
