@@ -21,8 +21,8 @@ class RatingView extends StatelessWidget {
         InkWell(
           onTap: launchURL,
           child: Container(
-            height: 150,
-            width: 350,
+            height: 180,
+            width: 560,
             decoration: BoxDecoration(
               image: const DecorationImage(
                 image: AssetImage(Assets.imagesRating),

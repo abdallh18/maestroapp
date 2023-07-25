@@ -1,4 +1,5 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
+import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/material.dart';
 import 'package:maestorstore_app/views/aboutus_view.dart';
 import 'package:maestorstore_app/views/contact_view.dart';
@@ -30,7 +31,7 @@ class _HomeViewState extends State<HomeView> {
       backgroundColor: KPcolorBack,
       body: pages[selectIndex],
       bottomNavigationBar: CurvedNavigationBar(
-        height: 60,
+        height: 70,
         backgroundColor: KPcolorBack,
         animationDuration: const Duration(milliseconds: 300),
         onTap: (index) {
@@ -39,12 +40,19 @@ class _HomeViewState extends State<HomeView> {
           });
         },
         index: selectIndex,
-        items: const <Widget>[
-          Icon(Icons.phone, size: 30),
-          Icon(Icons.people_alt_rounded, size: 30),
-          Icon(Icons.home, size: 30),
-          Icon(Icons.shopping_bag_outlined, size: 30),
-          Icon(Icons.home, size: 30),
+        items: const [
+          CurvedNavigationBarItem(
+              child: Icon(Icons.phone, size: 30), label: "contact Us"),
+          CurvedNavigationBarItem(
+              child: Icon(Icons.people_alt_rounded, size: 30),
+              label: "About Us"),
+          CurvedNavigationBarItem(
+              child: Icon(Icons.home, size: 30), label: "Home"),
+          CurvedNavigationBarItem(
+              child: Icon(Icons.shopping_bag, size: 30), label: "Services"),
+          CurvedNavigationBarItem(
+              child: Icon(Icons.storefront_rounded, size: 30),
+              label: "Portfolio Us"),
         ],
       ),
     );
